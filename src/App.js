@@ -1,25 +1,48 @@
-import logo from './logo.svg';
-import './App.css';
+// import './App.css';
+// import Card from './components/Card';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+// function App() {
+//   return (
+//     <div>
+//       <Card />
+//     </div>
+//   );
+// }
+
+// export default App;
+
+
+// import React from 'react'
+// import Student from './components/Students/Student'
+
+
+// const App = () => {
+//     return (
+//         <div>
+//             <Student />
+//         </div>
+//     )
+// }
+
+// export default App
+
+
+import React from 'react'
+import GetAll from './components1/GetAll/GetAll'
+import { BrowserRouter, Routes, Route } from 'react-router-dom'
+import InputCard from './components1/InputCard/InputCard'
+
+const App = () => {
+    return (
+        <div>
+            <BrowserRouter>
+                <Routes>
+                    <Route path="/" element={<GetAll />} />
+                    <Route path="/input" element={<InputCard />} />
+                </Routes>
+            </BrowserRouter>
+        </div>
+    )
 }
 
-export default App;
+export default App
